@@ -1,0 +1,214 @@
+.buy
+  padding-top: 50px
+  padding-bottom: 50px
+
+.buy-block
+  display: flex
+  flex-direction: column
+  gap: 60px
+
+.buy-wrap
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+
+.slider
+  width: 800px
+  position: relative
+
+.buy__title
+  margin-bottom: 36px
+
+.buy-swiper
+  margin-left: 0
+
+.swiper-button-next,
+.swiper-button-prev
+  width: 30px
+  height: 30px
+  border-bottom: 5px solid #EE0072
+  border-left: 5px solid #EE0072
+  border-bottom-left-radius: 6px
+  filter: drop-shadow(0px 0px 20px rgba(238, 1, 117, 0.39)) drop-shadow(0px 16px 66px rgba(0, 0, 0, 0.23))
+  &::after
+    content: ''
+
+.swiper-button-next.swiper-button-disabled,
+.swiper-button-prev.swiper-button-disabled
+  opacity: .5
+
+.swiper-button-next
+  right: -30px
+  transform: rotate(-135deg)
+
+.swiper-button-prev
+  left: -30px
+  transform: rotate(45deg)
+
+.buy-slide__img
+  img
+    width: 100%
+    border-radius: 20px
+    cursor: pointer
+
+.buy-slide__img.luxary
+  box-shadow: 0px 0px 10px rgba(224, 137, 35, 0.85)
+  border-radius: 20px
+
+.buy-slide__title
+  font-weight: 500
+  font-size: 26px
+
+.buy-slide__price
+  width: max-content
+  background: #ffffff
+  color: #000000
+  font-weight: 900
+  padding: 3px 9px
+  border-radius: 14px
+  margin: 7px 0 4px
+
+.buy-slide__price.hot
+  background: #ED5228
+  color: #ffffff
+  position: relative
+  z-index: 1
+  overflow: hidden
+  &::after
+    content: ''
+    width: 29px
+    height: 29px
+    display: block
+    background: url('../img/hot.png') no-repeat center center / cover
+    position: absolute
+    top: 0
+    right: -13px
+    z-index: -1
+    transform: rotate(-20deg)
+
+.ruler
+  background: rgba(255, 255, 255, 0.4)
+  box-shadow: 0px 40px 40px rgba(0, 0, 0, 0.25)
+  backdrop-filter: blur(15px)
+  border-radius: 11px
+  height: max-content
+  padding: 19px 18px
+
+.ruler.luxary
+  background: rgba(0, 0, 0, 0.4)
+  border: 1px solid rgba(255, 255, 255, 0.18)
+  border-radius: 11px
+  .ruler__title
+    position: relative
+    overflow: hidden
+    color: transparent
+    &::before
+      content: 'LUXARY'
+      position: absolute
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.13) 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(180deg, #FFC83C 0%, #C68E00 69.79%, #FFFFFF 100%), #FFFFFF
+      -webkit-background-clip: text
+      -webkit-text-fill-color: transparent
+      background-clip: text
+      text-fill-color: transparent
+      text-shadow: 0px 0px 9px rgba(252, 181, 0, 0.71)
+      font-weight: 300
+
+.ruler__descr
+  font-size: 15px
+  line-height: 12px
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25)
+  margin-bottom: 6px
+
+.ruler__title
+  font-weight: 100
+  font-size: 45px
+  line-height: 41px
+  letter-spacing: 0.09em
+  text-shadow: 0px 1px 4px rgba(0, 0, 0, 0.25), 0px 0px 10px rgba(255, 188, 232, 0.35)
+
+.triangle
+  position: absolute
+
+.first-slider-triangle-1
+  background: url('../img/first-slider-triangle-1.png') no-repeat center center / contain
+  width: 500px
+  height: 500px
+  transform: rotate(-143deg)
+  right: -150px
+  z-index: -2
+  animation: firstSliderTriangle-1 14s ease-in-out infinite alternate
+
+.first-slider-triangle-2
+  background: url('../img/first-slider-triangle-2.png') no-repeat center center / contain
+  width: 300px
+  height: 300px
+  transform: rotate(-143deg)
+  right: -125px
+  bottom: -75px
+  z-index: -1
+  animation: firstSliderTriangle-2 14s ease-in-out infinite alternate
+
+.square
+  position: absolute
+
+.second-slider-square-1
+  background: linear-gradient(320.84deg, #FF00A8 -7.35%, rgba(255, 255, 255, 0) 135.25%), linear-gradient(151.73deg, rgba(255, 62, 1, 0.55) 25.23%, rgba(0, 209, 255, 0) 151.18%)
+  filter: blur(20px) drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.25))
+  border-radius: 66px
+  transform: rotate(-26deg)
+  width: 380px
+  height: 380px
+  z-index: -2
+  left: -150px
+  animation: firstSliderSquare-1 14s ease-in-out infinite alternate
+
+.second-slider-square-2
+  background: linear-gradient(151.73deg, rgba(255, 199, 0, 0.85) 25.23%, rgba(0, 209, 255, 0) 151.18%)
+  filter: blur(5px) drop-shadow(0px 0px 40px rgba(0, 0, 0, 0.25))
+  border-radius: 41px
+  transform: rotate(26deg)
+  width: 247px
+  height: 247px
+  z-index: -1
+  animation: firstSliderSquare-2 14s ease-in-out infinite alternate
+
+.third-slider-circle-1
+  background: linear-gradient(148.79deg, #00FF57 2.77%, #69C0FF 84.11%), #000000
+  filter: blur(20px)
+  width: 347px
+  height: 347px
+  right: -100px
+  z-index: -2
+  animation: thirdSliderCircle-1 14s ease-in-out infinite alternate
+
+.third-slider-circle-2
+  background: linear-gradient(133.92deg, rgba(255, 241, 115, 0.85) 46.35%, rgba(255, 153, 0, 0.85) 105.69%), #000000
+  box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25)
+  filter: blur(5px)
+  width: 245px
+  height: 245px
+  right: -150px
+  bottom: -40px
+  z-index: -1
+  animation: thirdSliderCircle-2 14s ease-in-out infinite alternate
+
+.star
+  position: absolute
+
+.four-slider-star-1
+  width: 390px
+  height: 390px
+  background: url('../img/four-slider-starblur-1.png') no-repeat center center / contain
+  transform: rotate(-19deg)
+  left: -200px
+  top: -20px
+  animation: fourSliderStar-1 14s ease-in-out infinite alternate
+
+.four-slider-star-2
+  width: 267px
+  height: 267px
+  background: url('../img/four-slider-star-2.png') no-repeat center center / contain
+  left: -20px
+  top: -20px
+  animation: fourSliderStar-2 14s ease-in-out infinite alternate

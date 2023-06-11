@@ -1,0 +1,114 @@
+.bouquet
+    padding-top: 42px
+    padding-bottom: 33px
+
+.bouquet-line
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 36px
+
+.bouquet-line__price
+    display: flex
+    align-items: center
+    gap: 5px
+    background: linear-gradient(90deg, rgba(255, 36, 141, 0.72) -11.76%, rgba(122, 0, 29, 0.72) 100%), #000000
+    box-shadow: 0px 0px 11px rgba(0, 0, 0, 0.25), 0px 0px 19px rgba(0, 0, 0, 0.25), 0px 0px 24px rgba(249, 145, 119, 0.1)
+    border-radius: 24px
+    padding: 6px 14px
+    cursor: pointer
+    span
+        font-size: 24px
+        overflow: hidden
+        color: transparent
+        position: relative
+        transition: transform var(--transition)
+        &::before
+            content: '6290 ₽'
+            position: absolute
+            inset: 0
+            background: linear-gradient(180deg, rgba(255, 200, 60, 0.7) 0%, rgba(198, 142, 0, 0.7) 69.79%, rgba(255, 255, 255, 0.7) 100%), #FFFFFF
+            -webkit-background-clip: text
+            -webkit-text-fill-color: transparent
+            background-clip: text
+            text-fill-color: transparent
+            text-shadow: 0px 0px 5px rgba(252, 181, 0, 0.71)
+    &:hover
+        svg
+            animation: cart .1s ease-in-out 4 alternate
+        span
+            transform: scale(1.02)
+
+.bouquet-wrap
+    display: flex
+    justify-content: space-around
+    gap: 15px
+
+.bouquet-left
+    position: relative
+    &::before
+        content: ''
+        position: absolute
+        top: 0
+        bottom: 0
+        width: 100vw
+        background: #f5f5f5
+        z-index: -1
+        left: -98vw
+    img
+        border-top-right-radius: 43px
+        border-bottom-right-radius: 43px
+        margin-left: -160px
+
+.bouquet-right
+    display: flex
+    flex-direction: column
+    gap: 50px
+    padding-top: 52px
+    max-width: 506px
+    position: relative
+
+.bouquet-right__block
+    position: relative
+    &:nth-child(2)
+        &::before
+            content: ''
+            display: block
+            background: url('../img/line1.png') no-repeat center center / cover
+            width: 318px
+            height: 115px
+            position: absolute
+            left: -332px
+            top: 20px
+    &:nth-child(3)
+        &::before
+            content: ''
+            display: block
+            background: url('../img/line2.png') no-repeat center center / cover
+            width: 364px
+            height: 24px
+            position: absolute
+            left: -380px
+            top: 20px
+    &:nth-child(4)
+        &::before
+            content: ''
+            display: block
+            background: url('../img/line3.png') no-repeat center center / cover
+            width: 437px
+            height: 117px
+            position: absolute
+            left: -450px
+            top: -70px
+
+.bouquet-right__title
+    text-shadow: 0px 0px 18px rgba(112, 189, 205, 0.38)
+    margin-bottom: 3px
+
+.bouquet-circle_1
+    background: linear-gradient(128.74deg, #FF8F60 16.75%, rgba(255, 255, 255, 0) 81.21%), #B53DFF
+    width: 615px
+    height: 615px
+    right: -400px
+    top: -10px
+    animation: circle 17s linear infinite

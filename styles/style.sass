@@ -1,0 +1,115 @@
+:root
+    --transition: .2s ease-in-out
+
+*
+    padding: 0
+    margin: 0
+    box-sizing: border-box
+    font-family: 'Roboto', 'sans-serif'
+    color: #fff
+
+.container
+    max-width: 1270px
+    padding: 0 35px
+    margin: 0 auto
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+    font-size: 53px
+    font-weight: 900
+    margin: 0
+
+p
+    font-size: 16px
+    font-weight: 400
+    margin: 0
+
+ul
+    list-style: none
+    padding: 0
+    margin: 0
+
+a
+    text-decoration: none
+    color: inherit
+    cursor: pointer
+    &:hover
+        color: inherit
+
+button
+    border: none
+    background: transparent
+
+body
+    padding-top: 110px
+    background: linear-gradient(180deg, #ED2727 0%, rgba(23, 158, 255, 0) 100%), linear-gradient(180deg, rgba(0, 168, 221, 0.45) 0%, rgba(185, 0, 201, 0) 100%), linear-gradient(180deg, #000000 0%, rgba(3, 13, 38, 0.53) 100%)
+    background-blend-mode: multiply, normal, normal
+    overflow-x: hidden
+
+
+
+@import header
+@import bouquet
+@import delivery
+@import buy
+
+@import animation
+
+@media screen and (max-width: 1200px)
+    .bouquet
+        display: none
+    .delivery-wrap
+        gap: 0
+        justify-content: unset
+    .delivary-left
+        img
+            width: 100%
+            margin-left: 0
+    .slider
+        width: 100%
+    .buy-wrap
+        &:nth-child(2n - 1)
+            flex-direction: column-reverse
+    .ruler
+        margin-bottom: 30px
+            
+
+@media screen and (max-width: 992px)
+    .header-nav__nav
+        display: none
+    .swiper-button-next,
+    .swiper-button-prev
+        display: none
+
+@media screen and (max-width: 768px)
+    body
+        padding-top: 35px
+    .header-text-btns__btn
+        width: 100%
+        text-align: center
+    .delivary-left 
+        margin-bottom: 60px
+    .buy-slide__img
+        img
+            width: auto
+            height: 300px
+
+@media screen and (max-width: 576px)
+    .container
+        padding: 0 15px
+    h2
+        font-size: 32px
+    .header-wrap
+        padding: 6px
+    .header-text__title
+        font-size: 43px
+    .delivary-right__title
+        font-size: 24px
+    .buy-slide__img
+        img
+            width: 100%
+            height: 350px

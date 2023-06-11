@@ -1,0 +1,187 @@
+header
+    padding-bottom: 42px
+    
+.header-wrap
+    background: url('../img/header-bg.png') no-repeat 200px -50px, linear-gradient(120.25deg, rgba(54, 0, 16, 0.4712) 4.92%, rgba(255, 255, 255, 0) 89.45%), rgba(255, 255, 255, 0.03)
+    backdrop-filter: blur(40px)
+    border-radius: 43px
+    padding: 39px 59px 89px 82px
+
+.header-nav
+    display: flex
+    align-items: center
+    justify-content: space-between
+    margin-bottom: 66px
+
+.header-nav__nav, .header-nav__list, .header-btns
+    display: flex
+    align-items: center
+
+.header-nav__logo
+    margin-right: 40px
+
+.header-nav__list,
+.header-btns,
+.header-nav__nav
+    gap: 36px
+    font-size: 20px
+
+.header-nav__item,
+.header-btns__btn
+    padding: 8px 20px
+
+.header-nav__item
+    border-radius: 24px
+    transition: background-color var(--transition), filter var(--transition)
+    &:first-child
+        &:hover
+            background-color: #03b63f
+            filter: drop-shadow(0px 0px 8px rgba(3, 182, 63, 1))
+    &:last-child
+        &:hover
+            background-color: #A91CFF
+            filter: drop-shadow(0px 0px 8px rgba(169, 28, 255, 1))
+
+.header-btns__btn
+    transition: filter var(--transition)
+    &:first-child
+        background: linear-gradient(90deg, #FF521C -11.76%, #FF8B4A 100%), #F3F3F3
+        border-radius: 24px
+        filter: drop-shadow(0px 0px 8px rgba(234, 93, 14, 0.93))
+        &:hover
+            filter: drop-shadow(0px 0px 24px rgba(234, 93, 14, 0.93))
+    &:last-child
+        background: linear-gradient(90deg, rgba(63, 27, 27, 0.72) -11.76%, rgba(103, 59, 33, 0.72) 100%), #000000
+        border-radius: 24px
+        filter: drop-shadow(0px 0px 10px rgba(136, 84, 37, 0.93))
+        text-shadow: 0px 0px 5px rgba(252, 181, 0, 0.71)
+        &:hover
+            filter: drop-shadow(0px 0px 24px rgba(136, 84, 37, 0.93))
+
+.header-nav__cart
+    background: rgba(255, 255, 255, 0.27)
+    backdrop-filter: blur(50px)
+    padding: 5px
+    border-radius: 50%
+    position: relative
+    &::before
+        content: '3'
+        position: absolute
+        display: block
+        background: #FA4444
+        border: 0.5px solid #913824
+        border-radius: inherit
+        width: 20px
+        height: 20px
+        color: #FFC8C8
+        font-size: 14px
+        text-align: center
+        top: -6px
+        right: -8px
+    &:hover
+        svg
+            animation: cart .1s ease-in-out 4 alternate
+
+.header-text
+    max-width: 536px
+    display: flex
+    flex-direction: column
+    gap: 34px
+
+.header-text__title
+    font-size: 55px
+
+.header-text__descr
+    max-width: 400px
+
+.header-text-btns__btn
+    padding: 12px 20px
+    display: inline-block
+    transition: filter var(--transition)
+    &:first-child
+        background: linear-gradient(90deg, #0070D8 -11.76%, #54ADFF 100%), #F3F3F3
+        filter: drop-shadow(0px 0px 20px #49A5FA) drop-shadow(0px 16px 66px rgba(0, 0, 0, 0.23)) drop-shadow(0px 0px 8px rgba(96, 150, 255, 0.93))
+        border-radius: 39px
+        margin-bottom: 28px
+        &:hover
+            filter: drop-shadow(0px 0px 12px #49A5FA) drop-shadow(0px 16px 66px rgba(0, 0, 0, 0.23)) drop-shadow(0px 0px 8px rgba(96, 150, 255, 0.93))
+    &:last-child
+        background: linear-gradient(90deg, #F00684 -11.76%, #EE0072 100%)
+        filter: drop-shadow(0px 0px 20px rgba(238, 1, 117, 0.39)) drop-shadow(0px 16px 66px rgba(0, 0, 0, 0.23))
+        border-radius: 39px
+        &:hover
+            filter: drop-shadow(0px 0px 40px rgba(238, 1, 117, 0.39)) drop-shadow(0px 16px 66px rgba(0, 0, 0, 0.23))
+
+.header-container
+    position: relative
+
+.circle
+    position: absolute
+    border-radius: 50%
+    filter: blur(20px)
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.25)
+    z-index: -1
+
+.header-circle_1
+    background: linear-gradient(180deg, #FF8F60 0%, rgba(255, 255, 255, 0) 100%), #EC4627
+    width: 315px
+    height: 315px
+    top: 50px
+    left: -50px
+    animation: circle 14s linear infinite
+
+.header-circle_2
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.48) 0%, rgba(255, 255, 255, 0) 100%), #FF0000
+    width: 215px
+    height: 215px
+    top: -50px
+    right: 340px
+    animation: circleReverse 10s linear infinite
+
+.header-circle_3
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.56) 0%, rgba(255, 255, 255, 0) 100%), #0BFD89
+    width: 98px
+    height: 98px
+    top: 120px
+    right: -30px
+    animation: circleReverse 17s linear infinite
+
+.header-circle_4
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.83) 0%, rgba(255, 255, 255, 0) 100%), #F8B60D
+    width: 173px
+    height: 173px
+    right: -70px
+    top: 420px
+    animation: circle 15s linear infinite
+
+.header-circle_5
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #21A2FF
+    width: 88px
+    height: 88px
+    right: 170px
+    bottom: -45px
+    animation: circleReverse 20s linear infinite
+
+.header-circle_6
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.88) 0%, rgba(255, 255, 255, 0) 100%), #A91CFF
+    width: 169px
+    height: 169px
+    right: 630px
+    bottom: -70px
+    animation: circle 18s linear infinite
+
+.header-circle_7
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0) 100%), #25A8C5
+    width: 125px
+    height: 125px
+    left: -40px
+    bottom: -20px
+    animation: circle 24s linear infinite
+
+.header-circle_8
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.64) 0%, rgba(255, 255, 255, 0) 100%), #0011A9
+    width: 318px
+    height: 318px
+    left: 650px
+    bottom: 150px
+    animation: circle 17s linear infinite

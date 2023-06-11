@@ -1,0 +1,65 @@
+.delivery
+    padding-top: 33px
+    padding-bottom: 50px
+    
+.delivary__title
+    margin-bottom: 20px
+
+.delivery-wrap
+    display: flex
+    align-items: center
+    justify-content: space-between
+    gap: 30px
+
+.delivary-left
+    position: relative
+    img
+        margin-left: -45px
+        transform: rotate(-12deg)
+        animation: card 7s ease-in-out infinite alternate
+
+.delivary-right
+    display: flex
+    flex-direction: column
+    gap: 26px
+    max-width: 630px
+
+.delivary-right__title
+    font-weight: 700
+    font-size: 28px
+    margin-bottom: 5px
+
+.delivary-right__descr
+    line-height: 148.19%
+    a
+        text-decoration: underline
+        color: #5096FF
+        &:hover
+            text-decoration: none
+
+.delivery-circle_1
+    background: linear-gradient(128.74deg, #000000 16.75%, rgba(255, 255, 255, 0) 81.21%), #24003A
+    width: 602px
+    height: 602px
+    top: -150px
+    left: -450px
+    z-index: -3
+    animation: circleReverse 28s linear infinite
+
+.delivery-circle_2
+    background: linear-gradient(128.74deg, #005408 16.75%, rgba(255, 255, 255, 0) 81.21%), #BBFE4E
+    width: 257px
+    height: 257px
+    top: 150px
+    left: 60px
+    z-index: -2
+    animation: circle 10s linear infinite
+
+.delivary-triangle_1
+    background: url('../img/delivery-triangle.png') no-repeat center center
+    position: absolute
+    width: 321px
+    height: 321px
+    left: -200px
+    z-index: -1
+    animation: delivaryTriangle 30s ease-in-out infinite alternate
